@@ -29,20 +29,23 @@ public class QuestionLibrary {
 
     public int getChoice2() {
         choice2 = getChoice1() + random.nextInt(3);
-        while (choice1 == choice2)
+        while (choice2 == choice1)
             choice2 = getChoice1() + random.nextInt(3);
         return (choice2);
     }
 
     public int getChoice3() {
         choice3 = getChoice2() + random.nextInt(3);
-        while (choice1 == choice2)
-            choice2 = getChoice1() + random.nextInt(3);
-        return (getChoice2() - random.nextInt(25));
+        while ((choice3 == choice2) || (choice3 == choice1))
+            choice3 = getChoice2() + random.nextInt(3);
+        return (choice3);
     }
 
     public int getChoice4() {
-        return (getChoice3() + random.nextInt(25));
+        choice4 = getChoice3() + random.nextInt(3);
+        while ((choice4 == choice3) || (choice4 == choice2) || (choice4 == choice1))
+            choice4 = getChoice2() + random.nextInt(3);
+        return (choice4);
     }
 
     public int getAnswer(){
