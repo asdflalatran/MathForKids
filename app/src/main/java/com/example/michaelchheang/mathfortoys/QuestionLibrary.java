@@ -1,4 +1,4 @@
-package com.example.nick.test;
+package com.example.michaelchheang.mathfortoys;
 
 import java.util.Random;
 import java.util.ArrayList;
