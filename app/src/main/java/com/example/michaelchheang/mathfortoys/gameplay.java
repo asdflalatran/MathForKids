@@ -1,4 +1,4 @@
-package com.example.nick.test;
+package com.example.michaelchheang.mathfortoys;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 
-public class MainActivity extends AppCompatActivity {
+public class gameplay extends AppCompatActivity {
 
     private QuestionLibrary mQuestionLibrary = new QuestionLibrary();
 
@@ -28,14 +28,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_gameplay);
 
-        mScoreView = (TextView) findViewById(R.id.scorenum);
-        mQuestionView = (TextView) findViewById(R.id.question);
-        mButtonChoice1 = (Button) findViewById(R.id.choice1);
-        mButtonChoice2 = (Button) findViewById(R.id.choice2);
-        mButtonChoice3 = (Button) findViewById(R.id.choice3);
-        mButtonChoice4 = (Button) findViewById(R.id.choice4);
+        mScoreView = (TextView) findViewById(R.id.scoreText);
+        mQuestionView = (TextView) findViewById(R.id.problemText);
+        mButtonChoice1 = (Button) findViewById(R.id.choice1_button);
+        mButtonChoice2 = (Button) findViewById(R.id.choice2_button);
+        mButtonChoice3 = (Button) findViewById(R.id.choice3_button);
+        mButtonChoice4 = (Button) findViewById(R.id.choice4_button);
 
         buttons.add(mButtonChoice1);
         buttons.add(mButtonChoice2);
@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
                 if (mButtonChoice1.getText() == mAnswer) {
                     mScore++;
                     updateScore(mScore);
-                    Toast.makeText(MainActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(gameplay.this, "correct", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 } else {
-                    Toast.makeText(MainActivity.this, "wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(gameplay.this, "wrong", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -63,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
                 if (mButtonChoice2.getText() == mAnswer) {
                     mScore++;
                     updateScore(mScore);
-                    Toast.makeText(MainActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(gameplay.this, "correct", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 } else {
-                    Toast.makeText(MainActivity.this, "wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(gameplay.this, "wrong", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -76,10 +76,10 @@ public class MainActivity extends AppCompatActivity {
                 if (mButtonChoice3.getText() == mAnswer) {
                     mScore = mScore + 1;
                     updateScore(mScore);
-                    Toast.makeText(MainActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(gameplay.this, "correct", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 } else {
-                    Toast.makeText(MainActivity.this, "wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(gameplay.this, "wrong", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -89,10 +89,10 @@ public class MainActivity extends AppCompatActivity {
                 if (mButtonChoice4.getText() == mAnswer) {
                     mScore++;
                     updateScore(mScore);
-                    Toast.makeText(MainActivity.this, "correct", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(gameplay.this, "correct", Toast.LENGTH_SHORT).show();
                     updateQuestion();
                 } else {
-                    Toast.makeText(MainActivity.this, "wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(gameplay.this, "wrong", Toast.LENGTH_SHORT).show();
                 }
             }
         });
